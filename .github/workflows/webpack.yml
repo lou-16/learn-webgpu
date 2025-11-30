@@ -23,7 +23,10 @@ jobs:
 
     - name: Build
       run:  npm run build
-        
+
+    - name: set up CNAME for my domain
+      run: echo "learn-webgpu.com" > ./dist/CNAME
+      
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
       with: 
